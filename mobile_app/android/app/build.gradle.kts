@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.gochamp.mobile_app"
+    namespace = "com.example.mobile_app"
     compileSdk = 36
 
     compileOptions {
@@ -19,18 +19,19 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.gochamp.mobile_app"
+        applicationId = "com.example.mobile_app"
         minSdk = flutter.minSdkVersion
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.1.0"
     }
 
     buildTypes {
         release {
             // Use debug signing for now - this is fine for testing
             signingConfig = signingConfigs.getByName("debug")
-            minifyEnabled = false
+            isMinifyEnabled = false
+            isShrinkResources = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
